@@ -172,10 +172,7 @@ class AttackerRobot : public Robot {
 
       kicker = new AttackerKicker(this);
 
-      wheels[0] = new Wheel(this,0,cfg->robotSettings.Wheel1Angle,cfg->robotSettings.Wheel1Angle,wheeltexid);
-      wheels[1] = new Wheel(this,1,cfg->robotSettings.Wheel2Angle,cfg->robotSettings.Wheel2Angle,wheeltexid);
-      wheels[2] = new Wheel(this,2,cfg->robotSettings.Wheel3Angle,cfg->robotSettings.Wheel3Angle,wheeltexid);
-      wheels[3] = new Wheel(this,3,cfg->robotSettings.Wheel4Angle,cfg->robotSettings.Wheel4Angle,wheeltexid);
+      drive = new DefaultDrive(this, wheeltexid);
     }
     virtual ~AttackerRobot() {
       std::cout << "Attacker Robot unloaded" << std::endl;
